@@ -2,6 +2,9 @@
 let DivElement=document.getElementById("output");
 let prom=new Promise((resolve)=>{
 	setTimeOut(()=>{
-		DivElement.innerText="Hello,world";
+		resolve("Hello,world!");
 	},1000);
 });
+prom.then((data)=>{
+	DivElement.innerText=data;
+})
